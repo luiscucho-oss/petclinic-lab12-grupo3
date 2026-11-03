@@ -3,11 +3,10 @@ package com.tecsup.petclinic.webs;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.jayway.jsonpath.JsonPath;
 import com.tecsup.petclinic.dtos.PetDTO;
+import com.tecsup.petclinic.support.IntegrationTest;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
@@ -20,8 +19,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * 
  */
-@AutoConfigureMockMvc
-@SpringBootTest
+@IntegrationTest
 @Slf4j
 public class PetControllerTest {
 
@@ -219,4 +217,3 @@ public class PetControllerTest {
 	}
 
 }
-    
